@@ -1,0 +1,170 @@
+
+html{
+	margin: 0px;
+}
+
+body{
+	background: #F5F5EF;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+
+
+
+
+}
+header{
+	
+
+}
+
+
+
+.logo{
+	width: 10%;
+	
+	
+}
+
+.logo:hover{
+	
+	transform: scale(1.05);
+
+}
+
+
+.rectangulo{
+	
+	margin: 0 0 10% 70%;
+	box-shadow: 10px 10px 40px 10px black;
+
+	
+	padding: 20px 0 40px;
+	background: #FFFFFF;
+	text-align: center;
+	height: 600px;
+	
+	width: 25%;
+	box-sizing: border-box;
+	border:   #000000;
+	border-radius: 20px;
+}
+
+.rectangulo img{
+	
+	width: 250px;
+	height: 250px;
+	
+
+}
+
+.rectangulo h2{
+	font-size: 20px;
+	margin: 8px 0 50px;
+	font-weight: bold;
+	font-size: 27px;
+
+
+}
+
+.rectangulo p{
+	font-size: 20px;
+	margin: 0 10px 0 10px;
+}
+
+.btn{
+	border-radius: 20px;
+	margin: 120px;
+	font-size: 20px;
+	padding: 8px;
+
+	font-weight: bold;
+	background: #545454;
+	color: white;
+}
+
+.btn:hover{
+	transform: scale(1.05);
+	background: orange;
+
+}
+
+.botones{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	gap: 30px;
+
+
+	position: absolute;
+	width: 100%;
+	left: 200px;
+	top: 700px;
+
+}
+
+
+
+.box{
+	position: absolute;
+	left: 200px;
+	top: 350px;
+}
+
+.boxtexto{
+	border: none;
+	cursor: pointer;
+	border-radius: 10px;
+
+	width: 200%;
+	background: #F5F5EF;
+	font-size: 25px;
+	text-align:justify ;
+
+
+
+}
+
+
+
+.botones input{
+	
+	
+	margin: 0 0 20px;
+	width: 20%;
+	border: none;
+	border-radius: 150px;
+	cursor: pointer;
+	font-size: 25px;
+	font-weight: bold;
+	float: left;
+	padding: 15px;
+}
+
+.botones input:hover{
+	color: white;
+	transform: scale(1.05);
+
+}
+
+.enviar1{
+	background: orange;
+
+}
+
+.enviar2{
+	background: lightcoral;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

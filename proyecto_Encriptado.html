@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+	<div >
+		<meta charset="utf-8">
+		<title>Encriptador</title>
+		<link rel="stylesheet" type="text/css" href="reset.css">
+		<link rel="stylesheet" type="text/css" href="encri.css">
+	</div>
+</head>
+
+
+<body class="budy">
+
+	<header>
+		<div>
+			<h1><img class="logo" src="imagenes-encripto/logo_encri.png" alt="Logo de la pagina"> </h1>
+		</div>
+	</header>
+
+	<main>
+			
+		<div class="rectangulo">
+			<img id="imaBuscar" class="rectangulo-logo" src="imagenes-encripto/buscador.png" alt="Logo buscador">
+			<h2 id="tituloMensaje">Ningun mensaje fue encontrado</h2>
+			<p id="parrafo" class="presentacion-texto">Ingresa el texto que desees encriptar o desencriptar.</p>
+			<input type="submit" value="Copiar" id="botonCopiar"class="btn">	
+		</div>
+
+
+			<div class="box">
+				<textarea  id="area" cols="23" rows="5" class="boxtexto" placeholder="Ingresa el texto aqui" required></textarea>
+			</div>
+
+
+			<div class="botones">
+				<input type="submit" value="Encriptar" class="enviar1">
+				<input type="submit" value="Desencriptar" class="enviar2">
+			</div>
+
+
+			<script>
+				var text=document.getElementById("area");
+				var botonEncriptar= document.querySelector("input.enviar1");
+				var botonDesencriptar= document.querySelector("input.enviar2");
+				var botonCopiar= document.querySelector("input.btn");
+				var varieble;
+
+				botonEncriptar.onclick=funEncriptar;
+				botonDesencriptar.onclick=funDesencriptar;
+				botonCopiar.onclick=copiar;
+
+
+				function copiar(texto) {
+					var text= (document.getElementById("parrafo").innerHTML)
+
+					const copyContent = async () => {
+					    	await navigator.clipboard.writeText(text);
+					    	
+					}		
+					copyContent()		
+				}
+
+
+				function funEncriptar(){
+					var valor=text.value
+
+					if (text.value){
+
+						document.getElementById("tituloMensaje").innerHTML="Texto Encriptado";
+						document.getElementById("imaBuscar").setAttribute("src", "imagenes-encripto/exito.png");
+						varieble=document.getElementById("parrafo").innerHTML=encriptado(valor);
+					}	
+				}
+
+
+				function funDesencriptar(){
+					var valor=text.value;
+
+					if (text.value){
+						document.getElementById("tituloMensaje").innerHTML="Texto Desencriptado";
+						document.getElementById("imaBuscar").setAttribute("src", "imagenes-encripto/exito.png");
+						varieble=document.getElementById("parrafo").innerHTML=desencriptado(valor);
+					}	
+				}
+
+
+				function encriptado (palabra){
+					var encri=[];
+					var pala
+						    
+					for (var i=0; i< palabra.length; i++) {
+
+				        if (palabra[i] == "a"){
+					        encri.push("ai");
+					    }
+
+						else if (palabra[i]== "e"){
+							encri.push("enter");
+						}
+
+						else if (palabra[i]== "i"){
+							encri.push("imes");
+						}
+
+						else if (palabra[i]== "o"){
+							encri.push("ober");
+						}
+
+						else if (palabra[i]== "u"){
+							encri.push("ufat");
+						}
+
+						else {
+							encri.push(palabra[i]);
+						}
+					}
+
+					pala= encri.join("");
+					return pala			
+				}
+
+
+				function desencriptado (palabra){
+
+					var a=palabra.replaceAll("ai","a");
+					var e=a.replaceAll("enter","e");
+					var i=e.replaceAll("imes","i");
+					var o=i.replaceAll("ober","o");
+					var u=o.replaceAll("ufat","u");
+
+					return u
+				}
+
+			</script>
+		</main>
+	</body>
+
